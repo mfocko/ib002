@@ -264,23 +264,23 @@ from the PyPI.
 
 ```sh
 % pytest -v test_sort.py
-============================================== test session starts ===============================================
+=================================== test session starts ====================================
 platform linux -- Python 3.6.8, pytest-3.8.2, py-1.7.0, pluggy-0.13.1 -- /usr/bin/python3
 cachedir: .pytest_cache
 rootdir: /home/xfocko/git/xfocko/ib002/postcondition-ambiguity, inifile:
 plugins: hypothesis-5.16.1
 collected 4 items
 
-test_sort.py::test_select_sort[select_sort-check_vague_postcondition] PASSED                               [ 25%]
-test_sort.py::test_select_sort[select_sort-check_postcondition] PASSED                                     [ 50%]
-test_sort.py::test_select_sort[broken_select_sort-check_vague_postcondition] PASSED                        [ 75%]
-test_sort.py::test_select_sort[broken_select_sort-check_postcondition] FAILED                              [100%]
+test_sort.py::test_select_sort[select_sort-check_vague_postcondition] PASSED         [ 25%]
+test_sort.py::test_select_sort[select_sort-check_postcondition] PASSED               [ 50%]
+test_sort.py::test_select_sort[broken_select_sort-check_vague_postcondition] PASSED  [ 75%]
+test_sort.py::test_select_sort[broken_select_sort-check_postcondition] FAILED        [100%]
 
-==================================================== FAILURES ====================================================
-____________________________ test_select_sort[broken_select_sort-check_postcondition] ____________________________
+========================================= FAILURES =========================================
+_________________ test_select_sort[broken_select_sort-check_postcondition] _________________
 
-sorting_function = <function broken_select_sort at 0x7f65fc9a42f0>
-postcondition = <function check_postcondition at 0x7f65fc9a4400>
+sorting_function = <function broken_select_sort at 0x7fac179308c8>
+postcondition = <function check_postcondition at 0x7fac1786d1e0>
 
     @given(lists(integers()))
 >   @settings(max_examples=1000)
@@ -291,10 +291,10 @@ postcondition = <function check_postcondition at 0x7f65fc9a4400>
     def test_select_sort(sorting_function, postcondition, numbers):
 
 test_sort.py:132:
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 test_sort.py:139: in test_select_sort
     postcondition(numbers, result)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 original_arr = [0, 0], arr = [0, 1]
 
@@ -328,13 +328,13 @@ E         - {0: 1, 1: 1}
 E         + {0: 2}
 
 test_sort.py:128: AssertionError
----------------------------------------------- Captured stdout call ----------------------------------------------
+----------------------------------- Captured stdout call -----------------------------------
 Falsifying example: test_select_sort(
     sorting_function=<function test_sort.broken_select_sort>,
     postcondition=<function test_sort.check_postcondition>,
     numbers=[0, 0],
 )
-======================================= 1 failed, 3 passed in 7.26 seconds =======================================
+============================ 1 failed, 3 passed in 6.84 seconds ============================
 ```
 
 We can clearly see that our broken select sort has passed the _vague postcondition_,
