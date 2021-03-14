@@ -124,7 +124,14 @@ def broken_select_sort(arr, n):
     return arr
 ```
 
+> There is also an easier way to break this, I leave that as an exercise ;)
+
 ## Property-based tests for our sorts
+
+Since we have talked a lot about proofs at the seminar, I would like to demonstrate
+it on the testing of the sorts. In the following text I will cover implementation
+of the loop invariant and both postconditions we have talked about and then test
+our sorts using them.
 
 ### Loop invariant
 
