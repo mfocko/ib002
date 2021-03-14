@@ -6,6 +6,15 @@ import itertools
 
 
 def compare_by_value(pair):
+    """
+    Takes a pair from enumerate in form: `index, value` and returns the value
+
+    Args:
+        pair (Tuple[int, T]): Index and element from the iterator at the index.
+
+    Returns:
+        Element from the pair.
+    """
     index, value = pair
     return value
 
@@ -26,6 +35,11 @@ def maximum(arr, n):
     return index
 
 
+# Precondition: n = |A|
+# Loop invariant:
+#     A[i + 1 : n] is sorted AND
+#     all elements of A[i + 1 : n] are bigger or equal to the other elements
+# Postcondition: A is sorted
 def select_sort(arr, n):
     """
     Sorts list `arr` using select sort algorithm.
@@ -37,41 +51,36 @@ def select_sort(arr, n):
     Returns:
         Sorted list `arr`.
     """
-    check_invariant(arr, n, n)
+    assert n == len(arr)
 
+    check_loop_invariant(arr, n, n)
     for i in reversed(range(1, n)):
         j = maximum(arr, i + 1)
         arr[i], arr[j] = arr[j], arr[i]
 
-        check_invariant(arr, n, i)
+        check_loop_invariant(arr, n, i)
 
     return arr
 
 
 def broken_select_sort(arr, n):
+    assert n == len(arr)
+
     if not arr:
         return
 
     max_value = max(arr)
 
-    check_invariant(arr, n, n)
-
+    check_loop_invariant(arr, n, n)
     for i in reversed(range(n)):
         arr[i] = max_value + i
 
-        check_invariant(arr, n, i)
+        check_loop_invariant(arr, n, i)
 
     return arr
 
 
-# Precondition: n = |A|
-# Loop invariant:
-#     A[i + 1 : n] is sorted AND
-#     all elements of A[i + 1 : n] are bigger or equal to the other elements
-# Postcondition: A is sorted
-
-
-def check_invariant(arr, n, i):
+def check_loop_invariant(arr, n, i):
     # A[i + 1 : n] is sorted
     for x, y in zip(itertools.islice(arr, i + 1, n), itertools.islice(arr, i + 2, n)):
         assert x <= y
@@ -81,9 +90,9 @@ def check_invariant(arr, n, i):
         # in case there are no elements
         return
 
-    # otherwise, since it's sorted, we can assume that it is enough to check the
-    # other elements to the smallest value
-    smallest = min(itertools.islice(arr, i + 1, n))
+    # otherwise, since the "tail" is sorted, we can assume that it is enough to
+    # check the other elements to the smallest value of the tail
+    smallest = arr[i + 1]
     for element in itertools.islice(arr, i + 1):
         assert smallest >= element
 
@@ -92,6 +101,7 @@ def check_vague_postcondition(original_arr, arr):
     if not arr:
         return
 
+    # check ordering
     for x, y in zip(arr, itertools.islice(arr, 1, len(arr))):
         assert x <= y
 
@@ -100,17 +110,21 @@ def check_postcondition(original_arr, arr):
     if not arr:
         return
 
+    # check ordering
     for x, y in zip(arr, itertools.islice(arr, 1, len(arr))):
         assert x <= y
 
+    # get counts from original list
     original_counts = {}
     for value in original_arr:
         original_counts[value] = 1 + original_counts.get(value, 0)
 
+    # get counts from resulting list
     counts = {}
     for value in arr:
         counts[value] = 1 + counts.get(value, 0)
 
+    # if arr is permutation of original_arr then all counts must be the same
     assert counts == original_counts
 
 
