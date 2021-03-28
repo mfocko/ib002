@@ -1,3 +1,13 @@
+---
+title: "Time complexity of extend"
+date: 2021-03-27
+draft: false
+staticDirs:
+- src
+
+katex: true
+---
+
 # Time complexity of `lst.extend`
 
 Each year there is a lot of confusion regarding time complexity of the `extend`
@@ -13,17 +23,17 @@ lists. There is a common misunderstanding regarding differences between `a += b`
 
 - `a.extend(b)` - adds all elements from `b` to `a`.
 
-  Time complexity: $`\mathcal{O}(n)`$, where $`n`$ denotes the length of `b`.
+  Time complexity: $\mathcal{O}(n)$, where $n$ denotes the length of `b`.
 
 - `a += b` - equivalent to `a.extend(b)`
 
 - `a + b` - constructs a new list that contains elements from `a` followed by
   elements from `b`.
 
-  Time complexity: $`\mathcal{O}(m + n)`$, where $`m, n`$ denote the length of
+  Time complexity: $\mathcal{O}(m + n)$, where $m, n$ denote the length of
   `a` and `b` respectively.
 
-  Space complexity: $`\mathcal{O}(m + n)`$, where $`m, n`$ denote the length of
+  Space complexity: $\mathcal{O}(m + n)$, where $m, n$ denote the length of
   `a` and `b` respectively, since we construct new list.
 
 ## Example #1
@@ -74,11 +84,12 @@ example, second call happens on 2500-elements long lists).
 Because of the `extend` in each level of the tree (call hierarchy) we traverse all
 of the elements. That means:
 
-```math
+$$
 \mathcal{O}(n \cdot \log n)
-```
+$$
+
 , because we have
-$`\log n`$ levels in the tree and $`n`$ elements at each level.
+$\log n$ levels in the tree and $n$ elements at each level.
 
 ## Example #2
 
@@ -125,12 +136,12 @@ the levels.
 # Implementation of `extend`
 
 There is an example of dynamic array:
-- [interface (`dynlist.h`)](dynlist.h)
-- [implementation (`dynlist.c`)](dynlist.c)
+- [interface (`dynlist.h`)](src/dynlist.h)
+- [implementation (`dynlist.c`)](src/dynlist.c)
 
 For the sake of _Algorithms and Data Structures I_ we consider `APPEND`
 operation, i.e. adding the element to the end of the list, to have time complexity
-$`\mathcal{O}(1)`$ (**amortized**; which is out of the scope of IB002).
+$\mathcal{O}(1)$ (**amortized**; which is out of the scope of IB002).
 
 If we have a look at the `extend` implementation in this dynamic array example:
 
@@ -156,7 +167,7 @@ of this operation is time dependant on the `src` array.
 In this specific implementation, you could also resize the memory allocated for
 the array in one go and copy _whole_ `src` array in one go. However even if you
 did so, it would be still dependant on the size of the `src` array. Cause you still
-need to copy $`\texttt{count}(src) \cdot \texttt{elementSize}(src)`$ bytes. From
-that we can assume that for specific instance of array the $`\texttt{elementSize}(src)`$
+need to copy $\texttt{count}(src) \cdot \texttt{elementSize}(src)$ bytes. From
+that we can assume that for specific instance of array the $\texttt{elementSize}(src)$
 is fixed, therefore we consider it a constant. That way we are getting
-$`\mathcal{O}(\texttt{count}(src))`$ as a time complexity of our `extend` operation.
+$\mathcal{O}(\texttt{count}(src))$ as a time complexity of our `extend` operation.
