@@ -4,8 +4,6 @@ date: 2021-03-27
 draft: false
 staticDirs:
 - src
-
-katex: true
 ---
 
 # Vague postconditions and proving correctness of algorithms
