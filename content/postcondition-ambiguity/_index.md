@@ -1,6 +1,16 @@
+---
+title: "Postconditions and correctness of algorithms"
+date: 2021-03-27
+draft: false
+staticDirs:
+- src
+
+katex: true
+---
+
 # Vague postconditions and proving correctness of algorithms
 
-- [Source code](test_sort.py)
+- [Source code](src/test_sort.py)
 
 ## Introduction
 

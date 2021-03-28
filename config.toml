@@ -1,0 +1,23 @@
+baseURL = "https://fi.muni.cz/~xfocko/ib002"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "IB002"
+theme = "hugo-book"
+defaultContentLanguageInSubdir = false
+paginate = 10
+
+[outputs]
+    home = ["HTML", "JSON"]
+
+[params]
+    subtitle = "Additional materials for IB002"
+    brand = "IB002"
+    email = "xfocko@mail.muni.cz"
+
+    BookSection = '*'
+    BookTheme = 'dark'
+
+[markup.highlight]
+    style = "dracula"
+    lineNos = true
+    lineNumbersInTable = true
