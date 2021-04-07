@@ -1,5 +1,5 @@
 ---
-title: "Postconditions and correctness of algorithms"
+title: "Vague postconditions and proof"
 date: 2021-03-27
 draft: false
 staticDirs:
