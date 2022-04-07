@@ -26,7 +26,7 @@ FUNCTION VisitedDFS(u, Visited) IS
 END
 #+END_SRC
 
-This implementation is correct, does the DFS traversal as it should, however it has one „smallish“ downside and that is the time complexity. The usage of set raises the time complexity, of course it is implementation dependant. However in case of either RB-tree or hash-table implementation, we get look-up in time \( \mathcal{O}(n) \) for hash-table in worst-case or \( mathcal{O}(\log n) \) for the other in the worst-case. Both are not ideal compared to checking color on vertex.
+This implementation is correct, does the DFS traversal as it should, however it has one „smallish“ downside and that is the time complexity. The usage of set raises the time complexity, of course it is implementation dependant. However in case of either RB-tree or hash-table implementation, we get look-up in time \( \mathcal{O}(n) \) for hash-table in worst-case or \( \mathcal{O}(\log n) \) for the other in the worst-case. Both are not ideal compared to checking color on vertex.
 
 ** Iterative DFS from the exercises
 #+BEGIN_SRC
