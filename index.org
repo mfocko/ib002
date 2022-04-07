@@ -1,0 +1,27 @@
+* IB002
+
+This content can be also found deployed at [[https://fi.muni.cz/~xfocko/ib002][aisa]].
+
+** Table of Contents
+
+*** Introduction, linked list, queue and stack
+*** Algorithms and correctness
+
+- [[file:algorithms-and-correctness/postcondition-ambiguity/index.org][Vague postconditions and proving correctness of algorithms]]
+
+*** Asymptotic notation and time complexity
+
+- [[file:asymptotic-notation-and-time-complexity/extend/index.org][Time complexity of ~extend~]]
+
+*** Recursion
+*** Sorting algorithms
+*** Heap and priority queue
+*** Binary search trees
+*** Red-black trees
+*** B-trees
+*** Graphs
+
+- [[file:graphs/iterative-and-iterators/index.org][Iterative algorithms via iterators]]
+
+*** Paths in graphs
+*** Hash tables
