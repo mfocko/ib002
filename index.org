@@ -22,6 +22,9 @@ This content can be also found deployed at [[https://fi.muni.cz/~xfocko/ib002][a
 *** Heap and priority queue
 *** Binary search trees
 *** Red-black trees
+
+- [[file:rb-trees/applications/index.org][Applications of RB trees (Czech)]]
+
 *** B-trees
 *** Graphs
 
