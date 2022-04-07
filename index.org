@@ -2,34 +2,37 @@
 #+AUTHOR:  Matej Focko
 #+EMAIL:   xfocko@fi.muni.cz
 #+OPTIONS: toc:nil
+#+LINK:    git-source https://gitlab.fi.muni.cz/xfocko/ib002.git
 
-* IB002
+* Introduction
 
-This content can be also found deployed at [[https://fi.muni.cz/~xfocko/ib002][aisa]].
+This content can be found either at [[git-source][FI GitLab]] as source or deployed as web at [[https://fi.muni.cz/~xfocko/ib002][aisa]].
 
-** Table of Contents
+In case you find any source code that is not compressed, please refer to the [[git-source][source code]], you can either clone the repository or download it as a compressed archive from there.
 
-*** Introduction, linked list, queue and stack
-*** Algorithms and correctness
+* Table of Contents
 
-- [[file:algorithms-and-correctness/postcondition-ambiguity/index.org][Vague postconditions and proving correctness of algorithms]]
+** Introduction, linked list, queue and stack
+** Algorithms and correctness
 
-*** Asymptotic notation and time complexity
+- [[file:algorithms-and-correctness/postcondition-ambiguity/][Vague postconditions and proving correctness of algorithms]]
 
-- [[file:asymptotic-notation-and-time-complexity/extend/index.org][Time complexity of ~extend~]]
+** Asymptotic notation and time complexity
 
-*** Recursion
-*** Sorting algorithms
-*** Heap and priority queue
-*** Binary search trees
-*** Red-black trees
+- [[file:asymptotic-notation-and-time-complexity/extend/][Time complexity of ~extend~]]
 
-- [[file:rb-trees/applications/index.org][Applications of RB trees (Czech)]]
+** Recursion
+** Sorting algorithms
+** Heap and priority queue
+** Binary search trees
+** Red-black trees
 
-*** B-trees
-*** Graphs
+- [[file:rb-trees/applications/][Applications of RB trees (Czech)]]
 
-- [[file:graphs/iterative-and-iterators/index.org][Iterative algorithms via iterators]]
+** B-trees
+** Graphs
 
-*** Paths in graphs
-*** Hash tables
+- [[file:graphs/iterative-and-iterators/][Iterative algorithms via iterators]]
+
+** Paths in graphs
+** Hash tables
