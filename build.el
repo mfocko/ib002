@@ -8,4 +8,7 @@
          :with-toc 2
          :html-head "<link rel=\"stylesheet\"
                   href=\"/css/org.css\" type=\"text/css\"/>"
-         :html-preamble t)))
+         :html-preamble t
+         :html-link-home "/"
+         ))
+      )
