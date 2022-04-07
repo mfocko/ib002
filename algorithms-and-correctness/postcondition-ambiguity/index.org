@@ -73,9 +73,11 @@ On the other hand explicit postconditions can be used to our advantage *and also
 Consequences:
 
 1. Property-based testing
+
    If we have explicit postconditions we can use them to define properties of the output from our algorithms. That way we can use property-based testing, which does not depend on specific inputs and expected outputs, but rather on randomly generated input and checking if the output conforms to our expectations (the postconditions are fulfilled).
 
 2. Proof of correctness
+
    If we can prove that algorithm is correct even for algorithm that *is not* correct, we have a problem. That proof has no value and is useless.
 
 For the sake of showcasing the power of postconditions I will introduce "select sort" that is not correct, but will comply with both the loop invariant and our vague postcondition and thus pass the tests.

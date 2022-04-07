@@ -8,7 +8,7 @@
 - seřazené: používají na pozadí právě červeno-černý strom
 - neseřazené: používají na pozadí hašovací tabulku
 
-Pro srovnání, jak jsme si říkali na cvičení, červeno-černý strom má operace hledání, vkládání a mazání v časové složitosti \( \mathcal{O}(\log n) \). Na druhou stranu hašovací tabulka má ideálně konstatní časovou složitost, ale v nejhorším případě (detaily na posledním cvičení v semestru) je to bohužel \( \mathcal{O}(n) \).
+Pro srovnání, jak jsme si říkali na cvičení, červeno-černý strom má operace hledání, vkládání a mazání v časové složitosti \( \mathcal{O}(\log n) \). Na druhou stranu hašovací tabulka má ideálně konstantní časovou složitost, ale v nejhorším případě (detaily na posledním cvičení v semestru) je to bohužel \( \mathcal{O}(n) \).
 
 Výše jsme si ukázali nějaké předpoklady nutné pro hašovací tabulku i červeno-černý strom. Co je tedy lepší?
 - červeno-černý strom nám poskytuje /stabilní časovou složitost/, ale za cenu požadavku /uspořádání/ nad prvky
@@ -19,7 +19,7 @@ Výše jsme si ukázali nějaké předpoklady nutné pro hašovací tabulku i č
 Pro ukázku použití červeno-černých stromů v implementacích standardních knihoven
 jsme vybrali několik jazyků.
 
-Pokud Vás zajímají různé implementace, tak bych doporučil „prohrabávat“ se přes ně v následujícím pořadí: =C# → Java → C++=. Důvod pro zvolené pořadí vychází z toho, že C# implementace je poměrně čitelná a obsahuje množství vysvětlujících komentářů. Implementace v Javě je stejně čitelná, ačkoli již s minimem komentářů, které se maximálně odkazují na CLRS. C++ implementace je „značně poznačená“ podtržítky ;)
+Pokud Vás zajímají různé implementace, tak bychom doporučili „prohrabávat“ se přes ně v následujícím pořadí: =C# → Java → C++=. Důvod pro zvolené pořadí vychází z toho, že C# implementace je poměrně čitelná a obsahuje množství vysvětlujících komentářů. Implementace v Javě je stejně čitelná, ačkoli již s minimem komentářů, které se maximálně odkazují na CLRS. C++ implementace je „značně poznačená“ podtržítky ;)
 
 ** C++
 
