@@ -75,7 +75,7 @@ As we could observe in the example above, ~extend~ iterates over all of the elem
 
 Consider constructing of this list:
 
-#+HEADER: :file /tmp/rendered_G.png
+#+HEADER: :file ./rendered_G.png
 #+BEGIN_SRC dot
 digraph G {
     node [shape=record];
