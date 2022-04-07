@@ -1,6 +1,7 @@
-#+TITLE:  IB002 - additional materials
-#+AUTHOR: Matej Focko
-#+EMAIL:  xfocko@fi.muni.cz
+#+TITLE:   IB002 - additional materials
+#+AUTHOR:  Matej Focko
+#+EMAIL:   xfocko@fi.muni.cz
+#+OPTIONS: toc:nil
 
 * IB002
 
