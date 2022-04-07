@@ -1,3 +1,7 @@
+#+TITLE:  IB002 - additional materials
+#+AUTHOR: Matej Focko
+#+EMAIL:  xfocko@fi.muni.cz
+
 * IB002
 
 This content can be also found deployed at [[https://fi.muni.cz/~xfocko/ib002][aisa]].
