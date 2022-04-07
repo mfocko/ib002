@@ -6,9 +6,16 @@
          :recursive t
          :section-numbers nil
          :with-toc 2
-         :html-head "<link rel=\"stylesheet\"
-                  href=\"/css/org.css\" type=\"text/css\"/>"
          :html-preamble t
-         :html-link-home "/"
+
+         ;; use for deployment
+         :html-head "<link rel=\"stylesheet\"
+                  href=\"https://fi.muni.cz/~xfocko/ib002/css/org.css\" type=\"text/css\"/>"
+         :html-link-home "https://fi.muni.cz/~xfocko/ib002/"
+
+         ;; use for local testing
+         ;; :html-head "<link rel=\"stylesheet\"
+         ;;          href=\"/css/org.css\" type=\"text/css\"/>"
+         ;; :html-link-home "/"
          ))
       )
